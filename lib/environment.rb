@@ -1,0 +1,8 @@
+require_relative "gjua_v6/version"
+
+module GjuaV6
+  class Error < StandardError; end
+  # Your code goes here...
+end
+
+require_relative './cli'
