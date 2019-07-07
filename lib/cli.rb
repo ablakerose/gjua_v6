@@ -12,11 +12,14 @@ class CLI
     
     menu
   end
+  
   def menu
       puts "Please select a case to view case details."
       
       input = gets.chomp
-      case = Case.all[input.to_i -1]
+      
+      case = Case.all[input.to_i - 1]
+     
       
       Scraper.scrape_case_details(case)
   end
