@@ -16,4 +16,10 @@ class Scraper
     binding.pry
   end
   
+  def scrape_case_details(case)
+    html = optn (GJUA_URL + case.url)
+    doc = Nokogiri::HTML(html) 
+    #minute 53 to find out how to get other selectors
+  end
+  
 end
