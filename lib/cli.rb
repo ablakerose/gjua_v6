@@ -1,6 +1,7 @@
 class CLI 
   def run 
     puts " the cli is running!"
+    binding.pry
   end
 end
 

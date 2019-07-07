@@ -1,17 +1,18 @@
 
-# html = open("https://www.womenslinkworldwide.org/en/awards/cases")
-# doc = Nokogiri::HTML(html)
+html = open("https://www.womenslinkworldwide.org/en/awards/cases")
+doc = Nokogiri::HTML(html)
 
-# class Scraper
+class Scraper
  
-#   def get_page
-#       doc = Nokogiri::HTML(open("https://www.womenslinkworldwide.org/en/awards/cases"))
+ BASE_URL = 'https://www.womenslinkworldwide.org/en/awards/cases'
  
-#   end
+  def get_page
+      doc = Nokogiri::HTML(open("https://www.womenslinkworldwide.org/en/awards/cases"))
+  end
  
-# end
+end
 
-# Scraper.new.get_page
+Scraper.new.get_page
 
 
 # # cases = doc.css("#instructors .team-holder .person-box")
@@ -19,3 +20,8 @@
 # # # instructors.each do |instructor| 
 # # #   puts "Flatiron School <3 " + instructor.css("h2").text
 # # # end
+
+def self.scrape_cases
+  pg = open(BASE_URL)
+  parsed_html = Nokogiri.HTML(pg)
+  case_names = parsed_html.css()
