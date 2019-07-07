@@ -1,6 +1,6 @@
 class CLI
   def run
-    case_titles = []
+    
     puts " the cli is running!"
 
     html = open ("https://www.womenslinkworldwide.org/en/awards/cases")
@@ -8,11 +8,14 @@ class CLI
     doc = Nokogiri::HTML(html)
 
     doc.css(".contArt td").each do |case_doc|
-      binding.pry
-    title = case_doc.css("h2").text
-    case_titles << title
+      
+      title = case_doc.css("h2").text
+      Case.new(title)
     end
-    binding.pry
+    
+    Case.all.each.with_index(1) do |title, i|
+      puts "#{i}. #{title}"
+    end
   end
 end
 
