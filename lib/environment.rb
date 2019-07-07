@@ -1,3 +1,4 @@
+require 'pry'
 require 'nokogiri'
 require 'open-uri'
 require_relative "gjua_v6/version"
@@ -8,3 +9,4 @@ module GjuaV6
 end
 
 require_relative './cli'
+require_relative './scraper'
