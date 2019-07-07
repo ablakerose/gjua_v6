@@ -4,7 +4,7 @@ class CLI
     
     puts " the cli is running!"
 
-    Scraper.scrape_gjua_cases
+    Scraper.scrape_gjua_court_cases
   
     Case.all.each.with_index(1) do |movie, i|
       puts "#{i}. #{movie.title}"
@@ -14,14 +14,14 @@ class CLI
   end
   
   def menu
-      puts "Please select a case to view case details."
+      puts "Please select a case to view court case details."
       
       input = gets.chomp
-      
-      case = Case.all[input.to_i - 1]
+      kase = Case.all[input.to_i - 1]
      
       
-      Scraper.scrape_case_details(case)
+      Scraper.scrape_gjua_court_case_details(court_case)
   end
+  
 end
 

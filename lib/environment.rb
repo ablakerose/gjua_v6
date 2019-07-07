@@ -10,4 +10,4 @@ end
 
 require_relative './cli'
 require_relative './scraper'
-require_relative './case'
+require_relative './court_case'
