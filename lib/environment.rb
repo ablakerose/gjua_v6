@@ -1,3 +1,4 @@
+require 'pry'
 require_relative "gjua_v6/version"
 
 module GjuaV6
