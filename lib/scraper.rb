@@ -15,7 +15,7 @@ class Scraper
       description = court_case_doc.css("div").text
       title_gavel_award_nominees = doc.css(".cLeft td")[0].text
       title_bludgeon_award_nominees = doc.css(".cRight td")[0].text
-      binding.pry
+     
       Case.new(title, url)
     end
     

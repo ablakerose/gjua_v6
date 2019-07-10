@@ -2,7 +2,22 @@ class CLI
  
   def run
     
-    puts " the cli is running!"
+    puts "Welcome to the 2018 Gender Justice Awards!"
+    puts "See cases nominated in the Gavel category for cases that promote gender equality and Bludgeon category for discriminatory decisions."
+    puts "Below is a list of all the nominations"
+    puts "To choose by category, type 'Gavel' or 'Bludgeon'."
+    
+
+    puts "   ___________ "
+    puts "  '._==_==_=_.' "
+    puts "  .-\:      /-. "
+    puts " | (|:.     |) | "
+    puts "  '-|:.     |-' "
+    puts "    \::.    / "
+    puts "     '::. .' " 
+    puts "       ) ( " 
+    puts "     _.' '._ " 
+    puts "     ------- " 
 
     Scraper.scrape_gjua_court_cases
   
