@@ -25,7 +25,7 @@ class Scraper
     html = open(GJUA_URL + court_case.url)
     doc = Nokogiri::HTML(html) 
     #minute 53 to find out how to get other selectors
-    
   end
+  
   
 end
