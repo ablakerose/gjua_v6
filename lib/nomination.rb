@@ -1,4 +1,4 @@
-class Case 
+class Nomination
   
   attr_accessor :title, :url, :gavel_or_bludgeon_category, :description
   @@all =[]
